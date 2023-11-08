@@ -1,10 +1,10 @@
 import './App.css';
-import Panel from './components/Panel';
+import Keyboard from './components/Keyboard';
 
 function App() {
   return (
     <div className="App">
-      <Panel/>
+      <Keyboard/>
     </div>
   );
 }

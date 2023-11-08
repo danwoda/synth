@@ -1,14 +1,20 @@
-.white-key {
-  margin: 100px auto;
+.key{
+  display: inline-block;
   text-align: center;
-  font-size: 32px;
-  width: 100px;
-  height: 300px;
-  border: 1px solid #d7d7d7;
+  font-size: 24px;
   border-radius: 0px 0px 10px 10px;
-  transition: background 0.2s, box-shadow 0.2s;
-  background: linear-gradient(to bottom, #fefefe, #f2f2f2);
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+  user-select: none;
+}
+
+.white-key {
+  padding-top: 270px;
+  z-index: 1;
+  position: relative;
+  width: 100px;
+  border: 1px solid #d7d7d7;
+  background: linear-gradient(to bottom, #fefefe, #f2f2f2);
 }
 
 .white-key:active {
@@ -16,13 +22,21 @@
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
 }
 
-.panel {
-  margin: 100px auto;
-  border: 1px solid black;
-  width: 500px;
-  height: 500px;
+.black-key {
+  padding-top: 200px;
+  z-index: 100;
+  margin: 0px -25px 0px -25px;
+  color: white;
+  width: 50px;
+  border: 2px solid #c0c0c0;
+  background: linear-gradient(to bottom, #454545, #040404);
+  vertical-align: top;
 }
 
-.panel-element {
-  display: block;
+.black-key:active {
+  background: #403f3f;
+}
+
+.keyboard {
+  text-align: center;
 }
