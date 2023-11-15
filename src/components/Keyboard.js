@@ -1,6 +1,8 @@
 import Key from "./Key"
 
-export default function Keyboard() {
+
+export default function Keyboard(selectedWaveform) {
+
 
   const keyData = [
     ['4C', '261.63'],
@@ -18,14 +20,15 @@ export default function Keyboard() {
   ]
 
   let ctx = new AudioContext()
-  
-  function clickHandler(frequency) {
+  //let clickHandler;
+  function clickHandler(frequency)  {
     let osc = false
     console.log('key click')
-    console.log(frequency)
+    console.log(selectedWaveform, frequency)
     if (!osc) {
       osc = ctx.createOscillator()
-      osc.type = 'triangle'
+      osc.type = selectedWaveform.setWaveFormType
+      console.log('Oscylator type in a custom event hander function: ', osc.type)
       osc.frequency.value = frequency
       osc.connect(ctx.destination)
       osc.start(ctx.currentTime)
@@ -34,11 +37,14 @@ export default function Keyboard() {
     }
   }
 
-  const keys = keyData.map(([noteName, frequency]) => {
+  const keys = keyData.map(([noteName, frequency]) => { 
     return <Key
       onClick={() => clickHandler(frequency)}
+
       noteName={noteName}
-      frequency={frequency} />
+   //   frequency={frequency}
+      
+      />
   })
 
   return (
