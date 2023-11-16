@@ -1,12 +1,10 @@
 import './App.css';
-import Keyboard from './components/Keyboard';
+import Panel from './components/Panel';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <Keyboard/>
+      <Panel/>
     </div>
   );
 }
-
-export default App;
