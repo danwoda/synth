@@ -1,38 +1,42 @@
-.App {
+.key{
+  display: inline-block;
   text-align: center;
+  font-size: 24px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.white-key {
+  padding-top: 270px;
+  z-index: 1;
+  position: relative;
+  width: 100px;
+  border: 1px solid #d7d7d7;
+  background: linear-gradient(to bottom, #fefefe, #f2f2f2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.white-key:active {
+  background: #f2f2f2;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.black-key {
+  padding-top: 200px;
+  z-index: 100;
+  margin: 0px -25px 0px -25px;
   color: white;
+  width: 50px;
+  border: 2px solid #c0c0c0;
+  background: linear-gradient(to bottom, #454545, #040404);
+  vertical-align: top;
 }
 
-.App-link {
-  color: #61dafb;
+.black-key:active {
+  background: #403f3f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.keyboard {
+  text-align: center;
 }
