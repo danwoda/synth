@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  synth:
+    build: .
+    container_name: msynth_c
+    ports:
+      - '3000:3000'
+    #volumes is a feature useful for development only to reflect changes in the source code or dependencies hosted on our local machine in a running container. By mapping
+    # the host's project directory to the container's working directory we do not rebuild the image that an already existing container runs on (images are always read only once built).
+    #Mapping paths (folders) between a host machine and containers makes the content in the host available for containers immidiately after saving changes locally. No need to restart (stop and start) containers to see changes.
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ##the below properties set docker to run containers in an interactive mode (necessary in case of react apps) making the container not able shut down automatically.
+    stdin_open: true
+    tty: true

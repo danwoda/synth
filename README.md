@@ -32,3 +32,16 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Running the app in a Docker container
+In the project root directory, you can run:
+
+### `docker-compose up`
+
+It will run the app within a container in an interactive mode. Just hit the 'http://localhost:3000'. Changes made in the source directory (locally) will be relected with page reload with no additional steps. To stop the container, open a new terminal instance and type `docker stop msynth_c`.
+
+## Building a new image to be shared with others
+
+In the project root directory, hit the command:
+
+`docker build .`
