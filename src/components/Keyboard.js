@@ -27,8 +27,8 @@ export default function Keyboard(selectedWaveform) {
     console.log(selectedWaveform, frequency)
     if (!osc) {
       osc = ctx.createOscillator()
-      osc.type = selectedWaveform.setWaveFormType
-      console.log('Oscylator type in a custom event hander function: ', osc.type)
+      osc.type = selectedWaveform.setWaveformType
+      console.log('Oscillator type in a custom event hander function: ', osc.type)
       osc.frequency.value = frequency
       osc.connect(ctx.destination)
       osc.start(ctx.currentTime)
